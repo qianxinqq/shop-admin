@@ -8,8 +8,13 @@ import router from './router'
 import '@/assets/css/style.css'
 // import axios from 'axios'
 import httpHelper from '@/plugins/http.js'
+import moment from 'moment'
 Vue.use(ElementUI)
 Vue.use(httpHelper)
+// 日期过滤器
+Vue.filter('fmtDate', function (v) {
+  return moment(v).format('YYY-MM-DD hh:mm:ss')
+})
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
