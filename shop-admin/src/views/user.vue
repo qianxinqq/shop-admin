@@ -199,7 +199,7 @@ export default {
     async changeSwitchMgstate (user) {
       const res = await this.$http.put(`users/${user.id}/state/${user.mg_state}`)
       // const data = res.data
-      console.log(res)
+      // console.log(res)
       if (status === 200) {
         const { meta: { status, msg } } = res.data
         if (status === 200) {
