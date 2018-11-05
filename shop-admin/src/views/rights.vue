@@ -14,11 +14,11 @@
       </el-table-column>
       <el-table-column prop="authName"
                        label="权限名称"
-                       width="100">
+                       width="120">
       </el-table-column>
       <el-table-column prop="path"
                        label="路径"
-                       width="80">
+                       width="100">
       </el-table-column>
       <el-table-column prop="level"
                        label="层级">
@@ -48,7 +48,6 @@ export default {
   methods: {
     async loadTableData () {
       const res = await this.$http.get(`rights/list`)
-      // console.log(res)
       // const data = res.data
       console.log(res)
       this.list = res.data.data
